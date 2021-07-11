@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">Translate name</string>
+    <string name="b_ar">ب</string>
+    <string name="j_ar">ج</string>
+    <string name="d_ar">د</string>
+    <string name="h_ar">ه</string>
+    <string name="w_ar">و</string>
+    <string name="z_ar">ز</string>
+    <string name="y_ar">ي</string>
+    <string name="k_ar">ك</string>
+    <string name="l_ar">ل</string>
+    <string name="m_ar">م</string>
+    <string name="n_ar">ن</string>
+    <string name="f_ar">ف</string>
+    <string name="q_ar">ق</string>
+    <string name="r_ar">ر</string>
+    <string name="t_ar">ت</string>
+    <string name="s_ar">س</string>
+    <string name="e_ar">ه</string>
+    <string name="i_ar">أنا</string>
+    <string name="u_ar">ش</string>
+    <string name="o_ar">ا</string>
+    <string name="p_ar">ص</string>
+    <string name="a_ar">أ</string>
+    <string name="g_ar">ز</string>
+    <string name="x_ar">شئ</string>
+    <string name="v_ar">ڤ</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="enter_the_text">Enter the text</string>
+    <string-array name="languages">
+        <item>Arabic</item>
+        <item>Korean</item>
+        <item>Chinese</item>
+    </string-array>
+</resources>
