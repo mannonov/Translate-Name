@@ -19,5 +19,12 @@
         android:id="@+id/imageConvertFragment"
         android:name="com.jaxadev.translatename.ui.ImageConvertFragment"
         android:label="fragment_image_convert"
-        tools:layout="@layout/fragment_image_convert" />
+        tools:layout="@layout/fragment_image_convert" >
+        <argument
+            android:name="translation_text"
+            app:argType="string" />
+        <argument
+            android:name="name_text"
+            app:argType="string" />
+    </fragment>
 </navigation>

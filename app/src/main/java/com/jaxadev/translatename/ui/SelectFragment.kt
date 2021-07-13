@@ -1,13 +1,13 @@
 package com.jaxadev.translatename.ui
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.jaxadev.translatename.R
 import com.jaxadev.translatename.databinding.FragmentSelectBinding
 
@@ -47,18 +47,33 @@ class SelectFragment : Fragment(), AdapterView.OnItemSelectedListener {
 
         binding.spSelectLanguage.onItemSelectedListener = this
 
-
         binding.btnTranslateName.setOnClickListener {
-
 
             if (binding.edtGetText.text.toString() != "") {
 
+                val directions = SelectFragmentDirections
 
-                when (spinnerPosition) {
-                    0 -> translateToArabian(binding.edtGetText.toString())
+                findNavController().navigate(
+                    when (spinnerPosition) {
+                        0 -> directions.actionSelectFragmentToImageConvertFragment(
+                            translationText = translateToArabian(binding.edtGetText.text.toString()),
+                            nameText = binding.edtGetText.text.toString()
+                        )
+                        1 -> directions.actionSelectFragmentToImageConvertFragment(
+                            translationText = translateToArabian(binding.edtGetText.text.toString()),
+                            nameText = binding.edtGetText.text.toString()
+                        )
+                        3 -> directions.actionSelectFragmentToImageConvertFragment(
+                            translationText = translateToArabian(binding.edtGetText.text.toString()),
+                            nameText = binding.edtGetText.text.toString()
+                        )
+                        else -> directions.actionSelectFragmentToImageConvertFragment(
+                            "null",
+                            "null"
+                        )
+                    }
+                )
 
-
-                }
 
             }
 
@@ -68,7 +83,7 @@ class SelectFragment : Fragment(), AdapterView.OnItemSelectedListener {
 
     private fun translateToArabian(string: String): String {
 
-        val lowerCase = string.lowercase()
+        val lowerCase = string.toLowerCase()
 
         val stringBuilder = StringBuilder()
 
@@ -111,7 +126,7 @@ class SelectFragment : Fragment(), AdapterView.OnItemSelectedListener {
 
     private fun translateToKorean(string: String): String {
 
-        val lowerCase = string.lowercase()
+        val lowerCase = string.toLowerCase()
 
         val stringBuilder = StringBuilder()
 
@@ -154,7 +169,7 @@ class SelectFragment : Fragment(), AdapterView.OnItemSelectedListener {
 
     private fun translateToChinese(string: String): String {
 
-        val lowerCase = string.lowercase()
+        val lowerCase = string.toLowerCase()
 
         val stringBuilder = StringBuilder()
 
