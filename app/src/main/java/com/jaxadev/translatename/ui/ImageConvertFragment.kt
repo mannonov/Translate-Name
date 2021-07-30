@@ -99,6 +99,7 @@ class ImageConvertFragment : Fragment() {
         }
         try {
             outputStream!!.close()
+            //balo battar
         } catch (e: IOException) {
             e.printStackTrace()
         }
