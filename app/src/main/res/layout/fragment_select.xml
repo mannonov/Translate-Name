@@ -10,6 +10,7 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textStyle="bold"
         android:text="@string/enter_the_text"
         android:textAllCaps="true"
         android:textColor="@color/black"
@@ -26,6 +27,11 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="15dp"
         android:layout_marginTop="45dp"
+        android:padding="14dp"
+        android:elevation="20dp"
+        android:hint="Enter the name"
+        android:gravity="center"
+        android:background="@drawable/edittext_bg"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -36,7 +42,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="45dp"
-        android:orientation="horizontal"
+        android:orientation="vertical"
+        android:layout_margin="16dp"
+        android:elevation="20dp"
+        android:background="@drawable/edittext_bg"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -45,16 +54,18 @@
 
         <Spinner
             android:id="@+id/sp_select_language"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight=".1" />
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:elevation="20dp"
+            android:layout_margin="12dp"/>
 
         <Button
             android:id="@+id/btn_translate_name"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight=".1"
-            android:text="@string/app_name" />
+            android:text="@string/app_name"
+            android:padding="13dp"
+            android:layout_margin="12dp"/>
 
     </LinearLayout>
 
