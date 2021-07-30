@@ -26,7 +26,7 @@ class ImageConvertFragment : Fragment() {
 
     private val args: ImageConvertFragmentArgs by navArgs()
 
-    private lateinit var outputStream: OutputStream
+    private var outputStream: OutputStream? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -84,7 +84,7 @@ class ImageConvertFragment : Fragment() {
         if (!dir.exists()) {
             dir.mkdir()
         }
-        val file = File(dir, System.currentTimeMillis().toString() + ".jpg")
+        val file = File(dir, args.nameText + ".jpg")
         try {
             outputStream = FileOutputStream(file)
         } catch (e: FileNotFoundException) {
@@ -93,12 +93,12 @@ class ImageConvertFragment : Fragment() {
         binding.convertedImage.drawToBitmap().compress(Bitmap.CompressFormat.JPEG, 100, outputStream)
         Snackbar.make(binding.convertedImage,"Image Saved to SaveImage Folder", Snackbar.LENGTH_LONG).show()
         try {
-            outputStream.flush()
+            outputStream!!.flush()
         } catch (e: IOException) {
             e.printStackTrace()
         }
         try {
-            outputStream.close()
+            outputStream!!.close()
         } catch (e: IOException) {
             e.printStackTrace()
         }
