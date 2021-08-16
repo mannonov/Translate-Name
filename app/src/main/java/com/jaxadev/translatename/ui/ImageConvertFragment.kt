@@ -41,8 +41,6 @@ class ImageConvertFragment : Fragment() {
                     permissions[Manifest.permission.READ_EXTERNAL_STORAGE] ?: readPermissionGranted
                 writePermissionGranted = permissions[Manifest.permission.WRITE_EXTERNAL_STORAGE]
                     ?: writePermissionGranted
-
-
             }
 
         updateOrRequestPermissions()
